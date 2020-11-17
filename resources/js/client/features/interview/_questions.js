@@ -499,4 +499,186 @@ export default [
         ],
         showAnswer: false
     },
+    {
+        id: 27,
+        question: "what is context in React?",
+        tags: "React.js, React",
+        answers: [
+            {
+                rating: 3,
+                answer: `<div className="text-secondary">
+                Context is designed to share data that can be considered “global” for a tree of React components, such as the current authenticated user, theme, or preferred language.
+                </div>`
+            },
+            {
+                rating: 3,
+                answer: `<div className="text-secondary">
+                <div class="bg-danger">
+                "Context provides a way to pass data through the component tree without having to pass props down manually at every level"
+                </div>
+                When to use the Context API? <br />
+                <div>It can also be used in a multilingual application where we want to implement multiple languages that can be translated into the required text with the help of ContextAPI. It will save prop-drilling</div>
+                <ul>
+                    <li>
+                        <div>const MyContext = React.createContext(defaultValue);</div>
+                        <div><MyContext.provider value={{counter:1}} /></div>
+                    </li>
+                    <li>
+                    Consuming Context With <b>Class Components</b> <br />
+                    <code>
+                    render() { <br />
+                        &lt;MyContext.consumer&gt;<br />
+                            &nbsp;{ <br />
+                                &ensp;(value) => &lt;div&gt;{value}&lt;/div&gt;<br />
+                            &nbsp;}<br />
+                        &lt;/MyContext.consumer&gt;<br />
+                    }<br />
+                    </code>
+                    </li>
+                    <li>
+                    Consuming Context With <b>Functional Components</b> <br/>
+                    const value = useContext(MyContext);
+                    </li>
+                </ul>
+                </div>`
+            }
+        ],
+        showAnswer: false
+    },
+    {
+        id: 28,
+        question: "What is useEffect equivalent in class component?",
+        tags: "React.js, React",
+        answers: [
+            {
+                rating: 3,
+                answer: `<div className="text-secondary">
+                    useEffect Hook lets you perform side effects in function components. with React class lifecycle methods, you can think of useEffect Hook as componentDidMount, componentDidUpdate, and componentWillUnmount combined.
+                    <br />
+                    <code>
+                        React.useEffect(() => {
+                            return (
+                                // act as componentWillUnmount
+                            )
+                        })
+                    </code>               
+                </div>`
+            }
+        ],
+        showAnswer: false
+    },
+    {
+        id: 29,
+        question: "How to use componentWillUnmount in react hooks?",
+        tags: "React.js, React",
+        answers: [
+            {
+                rating: 3,
+                answer: `<div className="text-secondary">
+                    As per react hooks rule whenever an effect received a return function it runs only at the time of cleanup of the component, which is equivalent to componentWillUnmount class component lifecycle method.
+                    <br />
+                    <code>
+                        React.useEffect(() => { 
+                            document.addEventListener('click', handleClick);
+                            return function cleanup () {
+                            document.removeEventListener('click', handleClick);
+                            }
+                        }, [])
+                    </code>               
+                </div>`
+            }
+        ],
+        showAnswer: false
+    },
+    {
+        id: 30,
+        question: "What is useRef hook and why it is used?",
+        tags: "React.js, React",
+        answers: [
+            {
+                rating: 3,
+                answer: `<div className="text-secondary">
+                    The useRef Hook is a function that returns a mutable ref object whose .current property is initialized with the passed argument (initialValue). 
+                    The returned object will persist for the full lifetime of the component.
+                    <br />
+                    <code>
+                        const refContainer = useRef(initialValue);
+                    </code>               
+                </div>`
+            }
+        ],
+        showAnswer: false
+    },
+    {
+        id: 31,
+        question: "Controlled vs uncontrolled components in react?",
+        tags: "React.js, React",
+        answers: [
+            {
+                rating: 3,
+                answer: `<div className="text-secondary">
+                    <div>
+                        <h6>Controlled Component</h6>
+                        <p>A controlled component is bound to a value, and its changes will be handled in code by using event-based callbacks. Here, the input form element is handled by the react itself rather than the DOM.</p>
+                        <p>Controlled components have functions that govern the data passing into them on every onChange event occurs. This data is then saved to state and updated with setState() method. It makes component have better control over the form elements and data.</p>
+                    </div>
+                    <div>
+                        <h6>Uncontrolled Component</h6>
+                        <p>It is similar to the traditional HTML form inputs. Here, the form data is handled by the DOM itself. It maintains their own state and will be updated when the input value changes. To write an uncontrolled component, there is no need to write an event handler for every state update, and you can use a ref to access the value of the form from the DOM.</p>
+                    </div>
+                </div>`
+            }
+        ],
+        showAnswer: false
+    },
+    {
+        id: 32,
+        question: "what are react fragments?",
+        tags: "React.js, React",
+        answers: [
+            {
+                rating: 3,
+                answer: `<div className="text-secondary">
+                    In react render method will only render a single root node inside it at a time. When we are trying to render more than one 
+                    root element we have to put the entire content inside the a tag - <br />
+                    1) If we wrap using explicit tag a new DOM node is going to get created, which will impact performance. <br />
+                    2) So in React 16.2 version, Fragments were introduced and we use them instead of the extraneous wrapper ‘div’ tag. <br />
+                    <code>
+                        <React.Fragment>
+                            <div>First</div>
+                            <div>Second</div>
+                        </React.Fragment>
+                    </code>
+                </div>`
+            }
+        ],
+        showAnswer: false
+    },
+    {
+        id: 33,
+        question: "did you use Custom React Hooks?",
+        tags: "React.js, React",
+        answers: [
+            {
+                rating: 3,
+                answer: `<div className="text-secondary">
+                    No
+                </div>`
+            },
+            {
+                rating: 3,
+                answer: `<div className="text-secondary">
+                    Yes, in my current project Verizon we need to load an external script for analytical purpose. To fullfil this we have developed useScript hook to load external script tag
+                    <br />
+                    <code>
+                    const [ loading, error ] = useScript({
+                        src: "analytics.google.com/api/v2/",
+                        onload: () => console.log("Script loaded")
+                    })
+                    </code>
+                </div>`
+            }
+        ],
+        showAnswer: false
+    },
 ];

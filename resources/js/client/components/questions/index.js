@@ -93,11 +93,6 @@ const QuestionsComponent = props => {
                                                                         {ReactHtmlParser(
                                                                             ans.answer
                                                                         )}
-                                                                        <span className="badge badge-primary badge-pill">
-                                                                            {
-                                                                                ans.rating
-                                                                            }
-                                                                        </span>
                                                                     </li>
                                                                 </React.Fragment>
                                                             );
