@@ -2,7 +2,7 @@ import React from "react";
 import { Router, Switch, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 
-import InterviewRoute from "./containers/interview";
+import InterviewRoute from "./features/interview";
 
 const history = createBrowserHistory();
 export default class Routes extends React.Component {
