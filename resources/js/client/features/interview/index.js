@@ -47,25 +47,22 @@ const InterviewRoute = () => {
         return false;
     };
 
-    const questionsSearch = (str) => {
+    const questionsSearch = str => {
         const response = [];
         const contextStr = str || context;
-        console.log("--== 3 onContextChange ", search, contextStr, );
+        console.log("--== 3 onContextChange ", search, contextStr);
         _.forEach(modal.questions, (item, index) => {
-            let status = false;
-            let isGenericSearch = true;
+            const { tags } = item;
             if (contextStr.toLowerCase() !== "all") {
                 if (tags.toLowerCase().indexOf(contextStr.toLowerCase()) > -1) {
-                    status = searchString(item, index);
-                    isGenericSearch = false;
+                    response.push({ ...item, showAnswer: false });
+                    setSearch("");
                 }
             } else {
-                status = searchString(item, index);
-                isGenericSearch = true;
-            }
-
-            if (status) {
-                response.push({ ...item, showAnswer: isGenericSearch });
+                if (searchString(item, index)) {
+                    response.push({ ...item, showAnswer: true });
+                    setContext("all");
+                }
             }
         });
         console.log("--== Search Result ", response);
@@ -74,7 +71,7 @@ const InterviewRoute = () => {
 
     const onSearchClick = event => {
         questionsSearch();
-    }
+    };
 
     const onContextChange = async event => {
         questionsSearch(event.target.value);
@@ -91,11 +88,9 @@ const InterviewRoute = () => {
                                 <select
                                     className="custom-select"
                                     onChange={event => onContextChange(event)}
-                                    defaultValue = {context}
+                                    value={context}
                                 >
-                                    <option selected value="all">
-                                        all
-                                    </option>
+                                    <option value="all">All</option>
                                     <option value="basic">Basic</option>
                                     <option value="html">HTML</option>
                                     <option value="css">CSS</option>
