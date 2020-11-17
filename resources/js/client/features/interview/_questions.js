@@ -34,42 +34,58 @@ export default [
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
+                        <tr class="bg-dark text-light">
                             <td>Mar-2013 -- July-2015</td>
                             <td>Working at Hyderabad</td>
                             <td>Serco - is staffing Agency Company. I worked with their internal portal which helps HR-Executives to handle employee recutment and billing</td>
                         </tr>
-                        <tr>
+                        <tr class="bg-light text-dark">
                             <td>July-2015 -- May 2017</td>
                             <td>
                                 <div>Education: Missouri Western State University, St Joseph( close to kansas city), MO(Missouri)</div>
                                 <div>Course: Information Systems</div>
-                                <div>Visa: F1 VISA</div>
+                                <ul>
+                                    <li>VISA: F1 VISA </li>
+                                    <li>
+                                        <div>Type - CPT (Curricular Practical Training)</div>
+                                        <div>Period - 11 Months max</div>
+                                        <div>Constraint - Remote locations is not eligible, only at univercity location</div>
+                                    </li>
+                                    <li>
+                                        <div>Type - OPT (Optional Practical Training)</div>
+                                        <div>Period - Default One Year and extension upto 18-24 months </div>
+                                        <div>Constraint - Remote locations is eligible (any location)</div>
+                                    </li>
+                                </ul>
                             </td>
                             <td>While doing graduation I started working via CPT (Curricular Practical Training) [CPT - max 11 months]</td>
                         </tr>
-                        <tr>
+                        <tr class="bg-dark text-light">
                             <td>Aug-2016 -- Aug 2018</td>
                             <td>
                                 <div>Location: paladion, Herndon, VA(Virginia)</div>
-                                <div>VISA: F1 VISA -- OPT (Optional Practical Training) [default 1 year then extenstion 18-24 months max 3 years] </div>
                             </td>
                             <td>Graduated MS</td>
                         </tr>
-                        <tr>
+                        <tr class="bg-dark text-light">
                             <td>Sep-2018 -- Dec 2019</td>
                             <td>
                                 <div>Location: StateStreet, Boston, MA</div>
-                                <div>VISA: F1 VISA -- OPT (Optional Practical Training) [default 1 year then extenstion 18-24 months max 3 years] </div>
-                                <div>Employer Details: VISTA Applied Solutions Group INC, (2019 applied H1, 2021 oct) </div>
                             </td>
                             <td>There is an old trading application.</td>
                         </tr>
-                        <tr>
+                        <tr class="bg-light text-dark">
+                            <td>July-2020 -- Till date</td>
+                            <td>
+                                <div>Education: NEC (New England Collage)</div>
+                                <div>Course: Information Systems</div>
+                            </td>
+                            <td>Activily working as CPT</td>
+                        </tr>
+                        <tr class="bg-dark text-light">
                             <td>Jan-2020 -- Till date</td>
                             <td>
                                 <div>Location: Verizon, Piscataway, NJ</div>
-                                <div>VISA: F1 VISA -- CPT </div>
                             </td>
                             <td>Verizon E-Commerce portal</td>
                         </tr>

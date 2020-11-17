@@ -25,7 +25,7 @@ const InterviewRoute = () => {
         dispatch(asyncInterviewQuestions());
     }, []);
 
-    const searchString = (tags, question, answers) => {
+    const searchString = (tags, question, answers, index) => {
         const searchStr = search.toLowerCase();
         if (tags.toLowerCase().indexOf(searchStr) > -1) {
             return true;
@@ -56,11 +56,11 @@ const InterviewRoute = () => {
             let isGenericSearch = true;
             if (contextStr.toLowerCase() !== "all") {
                 if (tags.toLowerCase().indexOf(contextStr.toLowerCase()) > -1) {
-                    status = searchString(tags, question, answers);
+                    status = searchString(tags, question, answers, index);
                     isGenericSearch = false;
                 }
             } else {
-                status = searchString(tags, question, answers);
+                status = searchString(tags, question, answers, index);
                 isGenericSearch = true;
             }
 
