@@ -75,6 +75,7 @@ const InterviewRoute = () => {
 
     const onContextChange = async event => {
         questionsSearch(event.target.value);
+        setContext(event.target.value);
     };
 
     return (
