@@ -49,11 +49,11 @@ const InterviewRoute = () => {
 
     const questionsSearch = str => {
         const response = [];
-        const contextStr = str || context;
-        console.log("--== 3 onContextChange ", search, contextStr);
+        const contextStr = str;
+        console.log("2 --== onContextChange ", search, contextStr);
         _.forEach(modal.questions, (item, index) => {
             const { tags } = item;
-            if (contextStr.toLowerCase() !== "all") {
+            if (contextStr && contextStr.toLowerCase() !== "all") {
                 if (tags.toLowerCase().indexOf(contextStr.toLowerCase()) > -1) {
                     response.push({ ...item, showAnswer: false });
                     setSearch("");
@@ -61,7 +61,6 @@ const InterviewRoute = () => {
             } else {
                 if (searchString(item, index)) {
                     response.push({ ...item, showAnswer: true });
-                    setContext("all");
                 }
             }
         });
@@ -70,12 +69,15 @@ const InterviewRoute = () => {
     };
 
     const onSearchClick = event => {
+        setContext("all");
         questionsSearch();
     };
 
     const onContextChange = async event => {
-        questionsSearch(event.target.value);
-        setContext(event.target.value);
+        const selectedItem = event.target.value;
+        console.log("1 --== onContextChange ", selectedItem);
+        questionsSearch(selectedItem);
+        setContext(selectedItem);
     };
 
     return (
@@ -89,16 +91,36 @@ const InterviewRoute = () => {
                                 <select
                                     className="custom-select"
                                     onChange={event => onContextChange(event)}
-                                    value={context}
                                 >
-                                    <option value="all">All</option>
-                                    <option value="basic">Basic</option>
-                                    <option value="html">HTML</option>
-                                    <option value="css">CSS</option>
-                                    <option value="javascript">
-                                        Javascript
-                                    </option>
-                                    <option value="react">React</option>
+                                    {[
+                                        { value: "all", label: "All" },
+                                        { value: "basic", label: "Basic" },
+                                        { value: "html", label: "HTML" },
+                                        { value: "css", label: "CSS" },
+                                        {
+                                            value: "javascript",
+                                            label: "Javascript"
+                                        },
+                                        { value: "react", label: "React" }
+                                    ].map(item => {
+                                        console.log("Catagory Loop --== ", context+"==="+item.value);
+
+                                        if (context === item.value) {
+                                            return (
+                                                <option
+                                                    selected
+                                                    value={item.value}
+                                                >
+                                                    {item.label}
+                                                </option>
+                                            );
+                                        }
+                                        return (
+                                            <option value={item.value}>
+                                                {item.label}
+                                            </option>
+                                        );
+                                    })}
                                 </select>
                             </div>
                             <div className="col-sm-12 col-md-8">
