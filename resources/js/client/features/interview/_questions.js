@@ -521,7 +521,9 @@ export default [
                 <ul>
                     <li>
                         <div>const MyContext = React.createContext(defaultValue);</div>
-                        <div><MyContext.provider value={{counter:1}} /></div>
+                        <div>
+                            <code><MyContext.provider value={{counter:1}} /></code>
+                        </div>
                     </li>
                     <li>
                     Consuming Context With <b>Class Components</b> <br />
