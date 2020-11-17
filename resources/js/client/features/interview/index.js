@@ -25,7 +25,8 @@ const InterviewRoute = () => {
         dispatch(asyncInterviewQuestions());
     }, []);
 
-    const searchString = (tags, question, answers, index) => {
+    const searchString = (item, index) => {
+        const { tags, question, answers } = item;
         const searchStr = search.toLowerCase();
         if (tags.toLowerCase().indexOf(searchStr) > -1) {
             return true;
@@ -51,16 +52,15 @@ const InterviewRoute = () => {
         const contextStr = str || context;
         console.log("--== 3 onContextChange ", search, contextStr, );
         _.forEach(modal.questions, (item, index) => {
-            const { tags, question, answers } = item;
             let status = false;
             let isGenericSearch = true;
             if (contextStr.toLowerCase() !== "all") {
                 if (tags.toLowerCase().indexOf(contextStr.toLowerCase()) > -1) {
-                    status = searchString(tags, question, answers, index);
+                    status = searchString(item, index);
                     isGenericSearch = false;
                 }
             } else {
-                status = searchString(tags, question, answers, index);
+                status = searchString(item, index);
                 isGenericSearch = true;
             }
 
