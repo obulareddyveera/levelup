@@ -154,7 +154,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     Box model is used to create the design and layout of web pages. It is used to customize the layout of html elements. 
                     The browser renders every element as a rectangular box. The actual content is wrapped with padding then borders then margins.
                 </div>`
@@ -169,7 +169,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     By added display: flex property to an element, we are making the element a flex container. When display: flex property is added to an element, we are really defining display: block flex. The outer display type of our flex container is block and it acts like a block level element in normal flow. The inner display type is flex, so items directly inside our container will participate in flex layout.
                 </div>`
             }
@@ -183,7 +183,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                 Closure means that an inner function always has access to the variables and parameters of its outer function, even after the outer function has returned. To use a closure, simply define a function inside another function and expose it.Closure is used to hide the implementation details in JavaScript. In other words, it can be useful to create private variables or functions.
                 </div>`
             }
@@ -218,7 +218,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     JavaScript supports Primitive and complex data types. Boolean Number, String, undefined are the Primitive data types supported by JavaScript. Object and function are the Complex types supported by JavaScript.
                 </div>`
             }
@@ -232,7 +232,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     Arrow function in ES6 removes some of the syntax along with refining how to handle “this”. Arrow functions do not have their own “this”. They are not well suited for defining object methods. Arrow functions are not hoisted that means they must be defined before they are used. Using const is safer than using var because a function expression is always a constant value.
                     <br/> // ES5
                     <br/> var x = function(x, y) {
@@ -259,7 +259,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     <ol>
                         <li>
                         == compares the value of the variables not their type; if we use == to compare a string value 5 and a number value 5 it returns true.
@@ -280,7 +280,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                 JavaScript executes all operations on a single thread, but with the help of call stack, API stack, event queue and event loop, it gives the illusion of multi-threading. The event loop handles the process of checking whether the call stack empty or not. If the call stack is empty, new functions are added from the event queue to call stack. If the call stack is not empty, then the function call is processed. Event loop plays a major role behind JavaScript's asynchronous programming.
                 </div>`
             }
@@ -294,7 +294,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                 Both promises and async/await are built on promises. Only the promise chain is asynchronous in promises whereas the entire wrapper function is asynchronous in async/ await. Synchronous work can be handled in the same callback that means multiple promises can use Promise.call() in case of promises whereas synchronous work needs to be moved out of the callback that means multiple promises can be handled with simple variables. Error handling is similar in both promises and async/ await.
                 </div>`
             }
@@ -308,7 +308,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                 Promises are used to handle asynchronous operations. They provide an alternative approach for callbacks by reducing the callback and writing the cleaner code. A promise is an object that may produce a single value sometime in the future with a resolved value or a reason that it is not resolved (for example, network error).
                 <br/> It will be in one of the 3 possible states:
                 <ol>
@@ -328,7 +328,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     <ol>
                         <li>React is a library and has only the view layer whereas Angular is a framework and has complete MVC functionality.</li>
                         <li>React uses Virtual DOM whereas Angular uses browser’s DOM.</li>
@@ -347,7 +347,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     <ol>
                         <li>We use React because of virtual DOM, basically it is JavaScript copy of DOM</li>
                         <li>As DOM is in tree structure, react uses a diffing algorithm to check what nodes should be re-rendered and it will only change that part of the tree. So, the view rendering is very efficient in react.</li>
@@ -365,7 +365,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     <ol>
                         <li>Props is a way to pass data between parent to child, this is uni-directional, and props are immutable.</li>
                         <li>state is very owned to component, so it is used to hold some data in the component and state can be updated using set-state method.</li>
@@ -382,7 +382,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     Higher order components take a component as input and returns same component with some added properties.               
                 </div>`
             }
@@ -396,7 +396,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     PropTypes is a basic type checker (runtime checker) in React. It checks the types of props being passed to a given component.               
                 </div>`
             }
@@ -410,7 +410,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     Class components: </br>
                     <ol>
                         <li>A class component will extend from React.Component and create a render function which returns a React element.</li>
@@ -436,7 +436,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                 When we need to pass down the data, to components that lives in many levels of nested components, to avoid passing the same data through so many levels down, we can use context API so that every component can have access to it without passing
                 down data through multiple levels.               
                 </div>`
@@ -451,7 +451,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     <ol>
                         <li>In functional components, with the help of hooks we can use state and lifecycle methods.</li>
                         <li>We use useState() hook or State hook to access state and useEffect() hook or Effect hook to access lifecycle methods in functional components.</li>
@@ -468,7 +468,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     <ol>
                         <li>Redux is a state management system for JavaScript applications based on Flux design pattern. It is tiny in size and has no dependencies.</li>
                         <li>Redux follows Single source of truth, state is read-only and changes to state are made with pure functions. These principles make state becomes more predictable.</li>
@@ -491,7 +491,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     <ol>
                         <li>useCallback will return a memoized version of the callback that only changes if one of the dependencies has changed. It is useful when passing callbacks to optimized child components that rely on reference equality to prevent unnecessary renders.</li>
                         <li>useMemo will only recompute the memoized value when one of the dependencies has changed. This optimization helps to avoid expensive calculations on every render.</li>
@@ -508,7 +508,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     <ol>
                         <li>We can make asynchronous calls in react using window.fetch or using axios.</li>
                         <li>While using Redux, we use redux-saga and redux-thunk.</li>
@@ -525,7 +525,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     The component lifecycle has three distinct lifecycle phases: <br/>
                     <ol>
                         <li><b>Mounting:</b> The component is ready to mount in the browser DOM. This phase covers initialization from constructor(), getDerivedStateFromProps(), render(), and componentDidMount() lifecycle methods.</li>
@@ -575,14 +575,14 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                 Context is designed to share data that can be considered “global” for a tree of React components, such as the current authenticated user, theme, or preferred language.
                 </div>`
             },
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
-                <div class="bg-danger">
+                answer: `<div class="text-secondary">
+                <div class="bg-danger text-light">
                 "Context provides a way to pass data through the component tree without having to pass props down manually at every level"
                 </div>
                 When to use the Context API? <br />
@@ -591,7 +591,7 @@ export default [
                     <li>
                         <div>const MyContext = React.createContext(defaultValue);</div>
                         <div>
-                            <code><MyContext.provider value={{counter:1}} /></code>
+                            <code>&lt;MyContext.provider value={{counter:1}} /></code>
                         </div>
                     </li>
                     <li>
@@ -623,7 +623,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     useEffect Hook lets you perform side effects in function components. with React class lifecycle methods, you can think of useEffect Hook as componentDidMount, componentDidUpdate, and componentWillUnmount combined.
                     <br />
                     <code>
@@ -645,7 +645,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     As per react hooks rule whenever an effect received a return function it runs only at the time of cleanup of the component, which is equivalent to componentWillUnmount class component lifecycle method.
                     <br />
                     <code>
@@ -668,7 +668,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     The useRef Hook is a function that returns a mutable ref object whose .current property is initialized with the passed argument (initialValue). 
                     The returned object will persist for the full lifetime of the component.
                     <br />
@@ -687,7 +687,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     <div>
                         <h6>Controlled Component</h6>
                         <p>A controlled component is bound to a value, and its changes will be handled in code by using event-based callbacks. Here, the input form element is handled by the react itself rather than the DOM.</p>
@@ -709,7 +709,7 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     In react render method will only render a single root node inside it at a time. When we are trying to render more than one 
                     root element we have to put the entire content inside the a tag - <br />
                     1) If we wrap using explicit tag a new DOM node is going to get created, which will impact performance. <br />
@@ -732,13 +732,13 @@ export default [
         answers: [
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     No
                 </div>`
             },
             {
                 rating: 3,
-                answer: `<div className="text-secondary">
+                answer: `<div class="text-secondary">
                     Yes, in my current project Verizon we need to load an external script for analytical purpose. To fullfil this we have developed useScript hook to load external script tag
                     <br />
                     <code>

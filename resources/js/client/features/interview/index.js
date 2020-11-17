@@ -12,7 +12,6 @@ const InterviewRoute = () => {
 
     const dispatch = useDispatch();
     const modal = useSelector(dataset);
-    console.log("--== InterviewRoute ", modal, payload);
 
     React.useEffect(() => {
         const { questions } = modal;
@@ -28,6 +27,7 @@ const InterviewRoute = () => {
     const searchString = (item, index) => {
         const { tags, question, answers } = item;
         const searchStr = search.toLowerCase();
+        console.log("--== searchString ", searchStr);
         if (tags.toLowerCase().indexOf(searchStr) > -1) {
             return true;
         } else if (question.toLowerCase().indexOf(searchStr) > -1) {
@@ -50,7 +50,6 @@ const InterviewRoute = () => {
     const questionsSearch = str => {
         const response = [];
         const contextStr = str;
-        console.log("2 --== onContextChange ", search, contextStr);
         _.forEach(modal.questions, (item, index) => {
             const { tags } = item;
             if (contextStr && contextStr.toLowerCase() !== "all") {
@@ -75,7 +74,6 @@ const InterviewRoute = () => {
 
     const onContextChange = async event => {
         const selectedItem = event.target.value;
-        console.log("1 --== onContextChange ", selectedItem);
         questionsSearch(selectedItem);
         setContext(selectedItem);
     };
@@ -91,6 +89,7 @@ const InterviewRoute = () => {
                                 <select
                                     className="custom-select"
                                     onChange={event => onContextChange(event)}
+                                    defaultValue={"all"}
                                 >
                                     {[
                                         { value: "all", label: "All" },
@@ -103,20 +102,22 @@ const InterviewRoute = () => {
                                         },
                                         { value: "react", label: "React" }
                                     ].map(item => {
-                                        console.log("Catagory Loop --== ", context+"==="+item.value);
-
                                         if (context === item.value) {
                                             return (
                                                 <option
                                                     selected
                                                     value={item.value}
+                                                    key={item.value}
                                                 >
                                                     {item.label}
                                                 </option>
                                             );
                                         }
                                         return (
-                                            <option value={item.value}>
+                                            <option
+                                                value={item.value}
+                                                key={item.value}
+                                            >
                                                 {item.label}
                                             </option>
                                         );
@@ -125,34 +126,33 @@ const InterviewRoute = () => {
                             </div>
                             <div className="col-sm-12 col-md-8">
                                 <div className="d-flex justify-content-end">
-                                    <div className="input-group col-md-4 col-sm-12">
-                                        <input
-                                            type="text"
-                                            className="form-control"
-                                            placeholder="Search"
-                                            aria-label="Search"
-                                            aria-describedby="basic-addon2"
-                                            value={search}
-                                            onChange={event =>
-                                                setSearch(event.target.value)
+                                    <input
+                                        type="text"
+                                        className="form-control col-md-4"
+                                        placeholder="Search (press enter)"
+                                        aria-label="Search"
+                                        aria-describedby="basic-addon2"
+                                        value={search}
+                                        onChange={event => setSearch(event.target.value)}
+                                        onKeyPress={(event) => {
+                                            console.log('--== text change ', event);
+                                            if(event.key === "Enter"){
+                                                setTimeout(() => {
+                                                    onSearchClick();
+                                                }, 300);
                                             }
-                                        />
-                                        <div className="input-group-append">
-                                            <button
-                                                className="btn btn-primary"
-                                                type="button"
-                                                onClick={onSearchClick}
-                                            >
-                                                Search
-                                            </button>
-                                        </div>
-                                    </div>
+                                        }}
+                                    />
                                 </div>
                             </div>
                         </div>
                         <div className="card">
                             <div className="card-body">
-                                <Questions data={payload} />
+                                <div className="row">
+                                    <div className="col-12">
+                                        <Questions data={payload} />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

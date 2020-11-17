@@ -24,12 +24,10 @@ const QuestionsComponent = props => {
         _.forEach(cloneData, item => {
             if (item.id === entity.id) {
                 item.showAnswer = !item.showAnswer;
-                console.log("toggleEntity --== ", item);
             }
         });
         setDataSet(cloneData);
     };
-    console.log("--== Dataset Checks ", dataSet);
 
     return (
         <table className="table no-border">
