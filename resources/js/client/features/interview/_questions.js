@@ -7,6 +7,7 @@ export default [
             {
                 rating: 3,
                 answer: `<div class="bg-light text-secondary">
+                    My self Rambabu Vuppari
                     I have around 8 years of experience as a software developer. I have been working as a frontend developer for quite some time. 
                     I have hands on experience with HTML5, CSS3, Bootstrap, and Materialize CSS along with various JavaScript frameworks like React.js, 
                     Redux (state management), and Angular.js as well.
@@ -22,6 +23,58 @@ export default [
                     In this project we are using Formik, YUP validator, Redux (for state management).
                     </div>
                     Regarding the development process we are following agile methodology working in bi-weekly sprints.
+                    <h6>Profile Details</h6>
+                    Completed BTech 2009(IT)
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Period</th>
+                            <th>#</th>
+                            <th>About</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Mar-2013 -- July-2015</td>
+                            <td>Working at Hyderabad</td>
+                            <td>Serco - is staffing Agency Company. I worked with their internal portal which helps HR-Executives to handle employee recutment and billing</td>
+                        </tr>
+                        <tr>
+                            <td>July-2015 -- May 2017</td>
+                            <td>
+                                <div>Education: Missouri Western State University, St Joseph( close to kansas city), MO(Missouri)</div>
+                                <div>Course: Information Systems</div>
+                                <div>Visa: F1 VISA</div>
+                            </td>
+                            <td>While doing graduation I started working via CPT (Curricular Practical Training) [CPT - max 11 months]</td>
+                        </tr>
+                        <tr>
+                            <td>Aug-2016 -- Aug 2018</td>
+                            <td>
+                                <div>Location: paladion, Herndon, VA(Virginia)</div>
+                                <div>VISA: F1 VISA -- OPT (Optional Practical Training) [default 1 year then extenstion 18-24 months max 3 years] </div>
+                            </td>
+                            <td>Graduated MS</td>
+                        </tr>
+                        <tr>
+                            <td>Sep-2018 -- Dec 2019</td>
+                            <td>
+                                <div>Location: StateStreet, Boston, MA</div>
+                                <div>VISA: F1 VISA -- OPT (Optional Practical Training) [default 1 year then extenstion 18-24 months max 3 years] </div>
+                                <div>Employer Details: VISTA Applied Solutions Group INC, (2019 applied H1, 2021 oct) </div>
+                            </td>
+                            <td>There is an old trading application.</td>
+                        </tr>
+                        <tr>
+                            <td>Jan-2020 -- Till date</td>
+                            <td>
+                                <div>Location: Verizon, Piscataway, NJ</div>
+                                <div>VISA: F1 VISA -- CPT </div>
+                            </td>
+                            <td>Verizon E-Commerce portal</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>`
             }
         ],
