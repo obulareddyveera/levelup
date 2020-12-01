@@ -30,7 +30,7 @@ class AuthorController extends Controller
             ->where('googleId', '=', $request->googleId)
             ->get();
 
-        if (count($query) == 0) {
+        if ($query->isEmpty()) {
             DB::beginTransaction();
             try {
                 Log::info('api/srsl/staff::post --> : '.$request->name);
@@ -58,10 +58,6 @@ class AuthorController extends Controller
                 Log::error('api/srsl/staff::Exception --> : '.$e);
                 DB::rollback();
             }
-        } else {
-            $query = DB::table('authors')
-            ->where('googleId', '=', $request->googleId)
-            ->get();
         }
 
         Log::info('findByGoogleId Respo --== '.$query);
