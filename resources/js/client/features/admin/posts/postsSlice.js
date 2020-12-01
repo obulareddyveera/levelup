@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import _ from "underscore";
 
-export const url = "/api/blog/post";
+export const url = "api/blog/post";
 export const postsSlice = createSlice({
     name: "posts",
     initialState: {},
