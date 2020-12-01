@@ -27,7 +27,6 @@ const InterviewRoute = () => {
     const searchString = (item, index) => {
         const { tags, question, answers } = item;
         const searchStr = search.toLowerCase();
-        console.log("--== searchString ", searchStr);
         if (tags.toLowerCase().indexOf(searchStr) > -1) {
             return true;
         } else if (question.toLowerCase().indexOf(searchStr) > -1) {
@@ -63,7 +62,6 @@ const InterviewRoute = () => {
                 }
             }
         });
-        console.log("--== Search Result ", response);
         setPayload(response);
     };
 
@@ -135,7 +133,6 @@ const InterviewRoute = () => {
                                         value={search}
                                         onChange={event => setSearch(event.target.value)}
                                         onKeyPress={(event) => {
-                                            console.log('--== text change ', event);
                                             if(event.key === "Enter"){
                                                 setTimeout(() => {
                                                     onSearchClick();

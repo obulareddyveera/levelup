@@ -1,18 +1,20 @@
 import React from "react";
-import { Router, Switch, Route } from "react-router-dom";
-import { createBrowserHistory } from "history";
+import { HashRouter, Switch, Route } from "react-router-dom";
 
-import InterviewRoute from "./features/interview";
+import BlogRoute from "./features/blog";
+import AuthorRoute from "./features/author";
+import AdminRoute from "./features/admin/routes";
 
-const history = createBrowserHistory();
 export default class Routes extends React.Component {
     render() {
         return (
-            <Router history={history}>
+            <HashRouter>
                 <Switch>
-                    <Route path="/" component={InterviewRoute} />
+                    <Route path="/blog/admin/*" exact component={AdminRoute} />
+                    <Route path="/blog/author/login" exact component={AuthorRoute} />
+                    <Route path="/" exact component={BlogRoute} />
                 </Switch>
-            </Router>
+            </HashRouter>
         );
     }
 }

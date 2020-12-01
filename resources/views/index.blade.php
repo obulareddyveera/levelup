@@ -13,12 +13,11 @@
             padding: 0 !important;
             height: 100%;
             width: 100%;
-            background-color: #eee !important;
         }
     </style>
 </head>
     <body>
-        <div id="app" className="container-fluid"></div>
+        <div id="app" className="container-fluid p-0 m-0"></div>
         <script type="text/javascript" src="js/app.js"></script>
     </body>
 </html>
