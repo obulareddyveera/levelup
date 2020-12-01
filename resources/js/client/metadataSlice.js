@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import _ from "underscore";
 
-export const url = "api/metadata/category";
+export const url = "public/api/metadata/category";
 export const metadataSlice = createSlice({
     name: "posts",
     initialState: {},
